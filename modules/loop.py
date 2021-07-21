@@ -10,13 +10,13 @@ from utils.Config import Config
 Config = Config()
 
 
-@Client.on_message(filters.command(['loop', 'loop@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['loop', 'loop@SERRVBOT']) & ~filters.edited & ~filters.bot)
 @chat_allowed
 @admin_mode_check
 async def loopPlay(client, message, current_client):
     try:
         chat_id = message.chat.id
-        logInfo(f"loopPlay command in chat : {chat_id}")
+        logInfo(f"تم التشغيل بالدردشة : {chat_id}")
         command = None
         found = False
         if len(message.command) > 1:
