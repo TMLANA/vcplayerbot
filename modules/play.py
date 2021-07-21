@@ -32,7 +32,7 @@ DownloaderService = Downloader()
 Config = Config()
 
 
-@Client.on_message(filters.command(['play', 'play@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['play', 'play@SERRVBOT']) & ~filters.edited & ~filters.bot)
 @chat_allowed
 @admin_mode_check
 async def play(client, message, current_client):
@@ -41,7 +41,7 @@ async def play(client, message, current_client):
             message.from_user, 'username') else 'User')} if message.from_user is not None else {"chat_id": message.chat.id, "title": message.chat.title if hasattr(message.chat, 'ttile') else 'Chat'}
         chat_id = message.chat.id
         logInfo(
-            f"Playing command in chat : {chat_id} , requested_by : {requested_by}")
+            f"تم التشغيل بالدردشة : {chat_id} , requested_by : {requested_by}")
         # check if song url or name is provided or not
         song_url_name = message.text.split(" ")
         if len(song_url_name) > 1:
