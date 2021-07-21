@@ -7,7 +7,7 @@ from utils.MongoClient import MongoDBClient
 MongoDBClient = MongoDBClient()
 
 
-@Client.on_message(filters.command(['refreshadmins', 'refreshadmins@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['refreshadmins', 'refreshadmins@SERRVBOT']) & ~filters.edited & ~filters.bot)
 @database_check
 @chat_allowed
 @admin_mode_check
@@ -36,7 +36,7 @@ async def refreshAdmins(client, message, current_client):
         return
 
 
-@Client.on_message(filters.command(['auth', 'auth@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['auth', 'auth@SERRVBOT']) & ~filters.edited & ~filters.bot)
 @database_check
 @chat_allowed
 @admin_check
@@ -83,7 +83,7 @@ async def addAdmins(client, message, current_client):
         return
 
 
-@Client.on_message(filters.command(['unauth', 'unauth@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['unauth', 'unauth@SERRVBOT']) & ~filters.edited & ~filters.bot)
 @database_check
 @chat_allowed
 @admin_check
@@ -130,7 +130,7 @@ async def removeAdmins(client, message, current_client):
         return
 
 
-@Client.on_message(filters.command(['listadmins', 'listadmins@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['listadmins', 'listadmins@SERRVBOT']) & ~filters.edited & ~filters.bot)
 @database_check
 @chat_allowed
 @admin_check
@@ -159,7 +159,7 @@ async def listAdmins(client, message, current_client):
         return
 
 
-@Client.on_message(filters.command(['adminmode', 'adminmode@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['adminmode', 'adminmode@SERRVBOT']) & ~filters.edited & ~filters.bot)
 @database_check
 @chat_allowed
 @admin_check
