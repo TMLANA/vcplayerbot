@@ -7,13 +7,13 @@ from utils.Logger import *
 from helpers.fromatMessages import getMessage
 
 
-@Client.on_message(filters.command(['skip', 'skip@vcplayerbot']) & ~filters.edited & ~filters.bot)
+@Client.on_message(filters.command(['skip', 'skip@SERRVBOT']) & ~filters.edited & ~filters.bot)
 @chat_allowed
 @admin_mode_check
 async def skip(client, message, current_client):
     try:
         chat_id = message.chat.id
-        logInfo(f"Skip command in chat : {chat_id}")
+        logInfo(f"تم التخطي في الدردشة : {chat_id}")
 
         music_player_instance = callmanager.MusicPlayer()
         pytgcalls_instance, err_message = music_player_instance.createGroupCallInstance(
@@ -41,4 +41,4 @@ async def skip(client, message, current_client):
         return
 
     except Exception as ex:
-        logException(f"Error in skip: {ex}", True)
+        logException(f"خطء بالتــخطي: {ex}", True)
